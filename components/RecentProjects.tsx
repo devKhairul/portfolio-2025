@@ -1,9 +1,9 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
-
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
+import Image from "next/image";
 
 const RecentProjects = () => {
   return (
@@ -20,20 +20,24 @@ const RecentProjects = () => {
           >
             <PinContainer
               title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji"
+              href="#"
             >
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
                 >
-                  <img src="/bg.png" alt="bgimg" />
+                  <Image
+                    src="/bg.png"
+                    alt="bgimg"
+                    className="absolute top-0 left-0"
+                    width={1000}
+                    height={1000}
+                  />
                 </div>
-                <img
-                  src={item.img}
-                  alt="cover"
-                  className="z-10 absolute bottom-0"
-                />
+
+                <Image src={item.img} alt="cover" className="z-10 absolute" width={1000} height={1000} />
+
               </div>
 
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
